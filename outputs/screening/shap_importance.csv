@@ -1,0 +1,8 @@
+factor,mean_abs_shap
+Age,0.0617
+BMI,0.0244
+Hypertension / heart disease,0.0195
+Smoking,0.0085
+Hypertension,0.0066
+Sex,0.0065
+Heart disease,0.0042

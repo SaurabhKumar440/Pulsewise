@@ -1,0 +1,110 @@
+{
+  "feature_set": "screening",
+  "feature_set_description": "screening (no lab values)",
+  "model_name": "Random Forest",
+  "decision_threshold": 0.07743928499010524,
+  "default_threshold": 0.5,
+  "recall_target": 0.85,
+  "raw_columns": [
+    "gender",
+    "age",
+    "hypertension",
+    "heart_disease",
+    "smoking_history",
+    "bmi"
+  ],
+  "model_features": [
+    "is_male",
+    "age",
+    "hypertension",
+    "heart_disease",
+    "smoking_never",
+    "smoking_former",
+    "smoking_current",
+    "smoking_unknown",
+    "bmi",
+    "Age_Group",
+    "BMI_Category",
+    "Age_BMI_Risk",
+    "Cardiometabolic_Burden"
+  ],
+  "cv_roc_auc_mean": 0.8028390649939047,
+  "test_roc_auc": 0.7981043411452835,
+  "test_pr_auc": 0.324917774142279,
+  "test_metrics_default": {
+    "threshold": 0.5,
+    "accuracy": 0.895776952608723,
+    "precision": 0.6304347826086957,
+    "recall": 0.034523809523809526,
+    "specificity": 0.9976071503976353,
+    "f1": 0.0654627539503386,
+    "tn": 14175,
+    "fp": 34,
+    "fn": 1622,
+    "tp": 58
+  },
+  "test_metrics_tuned": {
+    "threshold": 0.07743928499010524,
+    "accuracy": 0.6147019950909434,
+    "precision": 0.19583675705286224,
+    "recall": 0.8511904761904762,
+    "specificity": 0.5867407980857203,
+    "f1": 0.3184146069917613,
+    "tn": 8337,
+    "fp": 5872,
+    "fn": 250,
+    "tp": 1430
+  },
+  "test_recall_ci95": [
+    0.8350572003675955,
+    0.8688918100816884
+  ],
+  "test_precision_ci95": [
+    0.18689816502211698,
+    0.20400547800251903
+  ],
+  "test_metrics_by_sex_tuned": {
+    "Female": {
+      "threshold": 0.07743928499010524,
+      "accuracy": 0.6474547749263778,
+      "precision": 0.18404282436910527,
+      "recall": 0.827033218785796,
+      "specificity": 0.6292993630573248,
+      "f1": 0.3010842368640534,
+      "tn": 5434,
+      "fp": 3201,
+      "fn": 151,
+      "tp": 722,
+      "roc_auc": 0.8064247438599005,
+      "n": 9508,
+      "n_diabetic": 873
+    },
+    "Male": {
+      "threshold": 0.07743928499010524,
+      "accuracy": 0.5658987619495377,
+      "precision": 0.20952944658182895,
+      "recall": 0.8773234200743495,
+      "specificity": 0.52081090778615,
+      "f1": 0.33827042522694695,
+      "tn": 2903,
+      "fp": 2671,
+      "fn": 99,
+      "tp": 708,
+      "roc_auc": 0.7810865324890879,
+      "n": 6381,
+      "n_diabetic": 807
+    }
+  },
+  "n_train": 63555,
+  "n_test": 15889,
+  "positive_rate": 0.1057348572579427,
+  "cleaning_log": {
+    "rows_raw": 100000,
+    "after_removing_other_gender": 99982,
+    "after_keeping_adults": 82767,
+    "after_removing_duplicates": 79444
+  },
+  "trained_at_utc": "2026-10-31T10:14:42+00:00",
+  "sklearn_version": "1.9.0",
+  "random_state": 42
+}

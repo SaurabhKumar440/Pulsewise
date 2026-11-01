@@ -1,0 +1,10 @@
+factor,mean_abs_shap
+HbA1c,2.4894
+Blood glucose,1.543
+Age,0.5992
+BMI,0.1599
+Hypertension / heart disease,0.1512
+Sex,0.1497
+Smoking,0.1432
+Heart disease,0.0383
+Hypertension,0.0113

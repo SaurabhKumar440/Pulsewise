@@ -1,0 +1,117 @@
+{
+  "feature_set": "full",
+  "feature_set_description": "with HbA1c + glucose",
+  "model_name": "XGBoost",
+  "decision_threshold": 0.16141246259212494,
+  "default_threshold": 0.5,
+  "recall_target": 0.85,
+  "raw_columns": [
+    "gender",
+    "age",
+    "hypertension",
+    "heart_disease",
+    "smoking_history",
+    "bmi",
+    "HbA1c_level",
+    "blood_glucose_level"
+  ],
+  "model_features": [
+    "is_male",
+    "age",
+    "hypertension",
+    "heart_disease",
+    "smoking_never",
+    "smoking_former",
+    "smoking_current",
+    "smoking_unknown",
+    "bmi",
+    "Age_Group",
+    "BMI_Category",
+    "Age_BMI_Risk",
+    "Cardiometabolic_Burden",
+    "HbA1c_level",
+    "blood_glucose_level",
+    "HbA1c_Category",
+    "Glucose_Category",
+    "Glucose_eAG_Gap"
+  ],
+  "cv_roc_auc_mean": 0.9751976861277634,
+  "test_roc_auc": 0.9747705176799413,
+  "test_pr_auc": 0.8876682142216621,
+  "test_metrics_default": {
+    "threshold": 0.5,
+    "accuracy": 0.9651960475800868,
+    "precision": 0.9795744680851064,
+    "recall": 0.6851190476190476,
+    "specificity": 0.9983109296924485,
+    "f1": 0.8063047285464098,
+    "tn": 14185,
+    "fp": 24,
+    "fn": 529,
+    "tp": 1151
+  },
+  "test_metrics_tuned": {
+    "threshold": 0.16141246259212494,
+    "accuracy": 0.9313990811253068,
+    "precision": 0.6301853486319505,
+    "recall": 0.85,
+    "specificity": 0.9410232950946583,
+    "f1": 0.7237709072478459,
+    "tn": 13371,
+    "fp": 838,
+    "fn": 252,
+    "tp": 1428
+  },
+  "test_recall_ci95": [
+    0.8321611823759063,
+    0.8667058398327793
+  ],
+  "test_precision_ci95": [
+    0.6087098681722942,
+    0.6487674692247184
+  ],
+  "test_metrics_by_sex_tuned": {
+    "Female": {
+      "threshold": 0.16141246259212494,
+      "accuracy": 0.9434160706773244,
+      "precision": 0.6526891522333638,
+      "recall": 0.8201603665521191,
+      "specificity": 0.9558772437753329,
+      "f1": 0.7269035532994924,
+      "tn": 8254,
+      "fp": 381,
+      "fn": 157,
+      "tp": 716,
+      "roc_auc": 0.9751687204967131,
+      "n": 9508,
+      "n_diabetic": 873
+    },
+    "Male": {
+      "threshold": 0.16141246259212494,
+      "accuracy": 0.9134931828866949,
+      "precision": 0.6090675791274593,
+      "recall": 0.8822800495662949,
+      "specificity": 0.9180121994976678,
+      "f1": 0.7206477732793523,
+      "tn": 5117,
+      "fp": 457,
+      "fn": 95,
+      "tp": 712,
+      "roc_auc": 0.9733881283654995,
+      "n": 6381,
+      "n_diabetic": 807
+    }
+  },
+  "n_train": 63555,
+  "n_test": 15889,
+  "positive_rate": 0.1057348572579427,
+  "cleaning_log": {
+    "rows_raw": 100000,
+    "after_removing_other_gender": 99982,
+    "after_keeping_adults": 82767,
+    "after_removing_duplicates": 79444
+  },
+  "trained_at_utc": "2026-10-31T10:13:45+00:00",
+  "sklearn_version": "1.9.0",
+  "random_state": 42
+}

@@ -1,0 +1,14 @@
+{
+  "name": "diabetes-risk-api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "diabetes-risk-dashboard": "file:..",
+    "express": "^4.21.2"
+  }
+}
